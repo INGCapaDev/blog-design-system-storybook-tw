@@ -1,4 +1,2 @@
 @import "tailwindcss";
-@layer theme;
-
-@import "./css/design-tokens.css" layer(theme);
+@import "./css/design-tokens.css";
