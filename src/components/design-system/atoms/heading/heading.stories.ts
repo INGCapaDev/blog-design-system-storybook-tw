@@ -9,6 +9,14 @@ const meta = {
       control: "select",
       options: ["h1", "h2", "h3", "h4", "h5", "h6"],
     },
+    size: {
+      control: "select",
+      options: ["sm", "base", "lg", "xl", "2xl", "3xl", "4xl"],
+    },
+    align: {
+      control: "select",
+      options: ["left", "center", "right"],
+    },
     variant: {
       control: "select",
       options: ["default", "accent"],
@@ -18,6 +26,8 @@ const meta = {
     level: "h1",
     children: "Heading",
     variant: "default",
+    align: "left",
+    size: "base",
   },
 } satisfies Meta<typeof Heading>;
 export default meta;
@@ -31,6 +41,15 @@ export const Default: Story = {
     level: "h1",
     children: "Default Heading",
     variant: "default",
+    align: "left",
+    size: "base",
+  },
+  argTypes: {
+    variant: {
+      table: {
+        disable: true,
+      },
+    },
   },
 };
 
@@ -39,5 +58,14 @@ export const Accent: Story = {
     level: "h1",
     children: "Accent Heading",
     variant: "accent",
+    align: "left",
+    size: "base",
+  },
+  argTypes: {
+    variant: {
+      table: {
+        disable: true,
+      },
+    },
   },
 };
