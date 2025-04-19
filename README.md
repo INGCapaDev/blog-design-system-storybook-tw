@@ -1,54 +1,123 @@
-# React + TypeScript + Vite
+# 🎨 React Design System with Storybook & Tailwind
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, scalable design system built with React, TypeScript, Storybook, and Tailwind CSS.
+This project demonstrates how to create a robust component library using best practices
+and industry-standard tools.
 
-Currently, two official plugins are available:
+## 🥃 Preview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Storybook Preview](https://6dxqfoy4g1.ufs.sh/f/9cuWqzvE7f2SHMKL9uF6dkv29eQPpUY5fyTS0bqmV7B4nlOg)
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- 🛠️ Built with Vite + React + TypeScript
+- 🎨 Styled with Tailwind CSS
+- 📚 Documented with Storybook
+- 🧬 Organized using Atomic Design principles
+- 💪 Type-safe component variants with CVA
+- 🔍 Comprehensive component documentation
+- 🎯 Best practices and patterns included
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🚀 Quick Start
+
+Clone this repository to your local machine using Git.
+
+| Command          | Action                                      |
+| :--------------- | :------------------------------------------ |
+| `pnpm install`   | Installs dependencies                       |
+| `pnpm dev`       | Starts local dev server at `localhost:5173` |
+| `pnpm storybook` | Start storybook at `localhost:6006`         |
+
+## 📦 Tech Stack
+
+- [React](https://react.dev)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com)
+- [Storybook](https://storybook.js.org)
+- [CVA (Class Variance Authority)](https://cva.style)
+- [clsx](https://github.com/lukeed/clsx)
+- [tailwind-merge](https://github.com/dcastil/tailwind-merge)
+
+## 🗂️ Project Structure
+
+```
+src/
+├── components/
+│   └── design-system/
+│       ├── atoms/          # Basic building blocks
+│       ├── molecules/      # Simple compositions
+│       └── organisms/      # Complex compositions
+├── lib/
+│   └── utils.ts           # Utility functions
+└── css/
+    └── design-tokens.css  # Design tokens
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 💎 Design Tokens
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Our design system uses custom design tokens for consistent styling:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```css
+@theme {
+  --color-primary: #c1d8c3; /* Soft sage green */
+  --color-secondary: #6a9c89; /* Deep teal */
+  --color-accent: #ffa725; /* Vibrant orange */
+  --color-background: #fff5e4; /* Warm white */
+}
 ```
+
+## 🧩 Components
+
+### Heading Component
+
+A flexible, type-safe heading component with multiple variants:
+
+```tsx
+<Heading level="h2" variant="accent" size="2xl" align="center">
+  Featured Section
+</Heading>
+```
+
+Available props:
+
+- `level`: h1-h6
+- `variant`: default | accent
+- `size`: sm | base | lg | xl | 2xl | 3xl | 4xl
+- `align`: left | center | right
+
+## 📚 Documentation
+
+Each component is thoroughly documented in Storybook with:
+
+- Interactive examples
+- Props documentation
+- Usage guidelines
+- Accessibility information
+
+## 🤝 Contributing
+
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is licensed under the MIT License - see the `LICENSE` file for details.
+
+## 🙏 Acknowledgments
+
+- [Atomic Design Methodology](https://atomicdesign.bradfrost.com/)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+- [Storybook Documentation](https://storybook.js.org/docs)
+
+## 🔗 Links
+
+- [Blog Post]()
+
+---
+
+Built with ❤️ by [INGCapaDEV](https://github.com/INGCapaDev)
