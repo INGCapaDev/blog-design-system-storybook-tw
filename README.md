@@ -116,7 +116,7 @@ This project is licensed under the MIT License - see the `LICENSE` file for deta
 
 ## 🔗 Links
 
-- [Blog Post]()
+- [Blog Post](https://blog.ingcapadev.com/blog/build-a-design-system-with-storybook-and-tailwind/)
 
 ---
 
